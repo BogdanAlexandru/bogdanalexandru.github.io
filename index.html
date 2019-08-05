@@ -1,0 +1,33 @@
+---
+
+---
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
+<body>
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <div class="home">
+                <h2 class="post-list-heading">Posts</h2>
+
+                {% for post in site.posts %}
+                <!-- Here's the header -->
+                <header>
+                    <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                </header>
+
+                <!-- Your post's summary goes here -->
+                <article>{{ post.excerpt }}</article>
+                {% endfor %}
+
+                <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+            </div>
+
+        </div>
+    </main>
+
+    {%- include footer.html -%}
+
+</body>
+</html>
