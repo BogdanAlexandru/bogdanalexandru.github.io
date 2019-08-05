@@ -6,11 +6,11 @@ date: 2018-01-20 13:53:16 +0300
 
 This post follows a discussion on **/r/gamedev's** Discord server, which was about giving NPCs large areas to roam within, as a possible alternative to using separate agent types & walkable areas (part of Unity's builtin NavMesh tools).
 
-This is a fairly rough prototype that can be further improved in a real project, especially w.r.t. the interaction with Triangle.Net and the editor experience. The code I used is [here](https://github.com/BogdanAlexandru/UnityTriangleNetExample), feel free to improve on it but since it's really just about three non-glue scripts with very few functions, I recommend writing your own as you learn the ideas from the article.
-
 Scenario: you want to define a polygonal area in your scene and pick random locations on it, for example to have a NPC roam within. There's no one-shot solution for this that I'm aware of, but there's at least one method for picking uniform random points within a triangle. Since polygons can be triangulated, we can apply the triangle formula in the context of the polygon.
 
 <!--more-->
+
+This is a fairly rough prototype that can be further improved in a real project, especially w.r.t. the interaction with Triangle.Net and the editor experience. The code I used is [here](https://github.com/BogdanAlexandru/UnityTriangleNetExample), feel free to improve on it but since it's really just about three non-glue scripts with very few functions, I recommend writing your own as you learn the ideas from the article.
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 

@@ -12,9 +12,7 @@ A while ago I was wondering what it'd take to get something like it up and runni
 
 A short gameplay video is here:
 
-<center>
 <iframe width="590" height="430" src="https://www.youtube.com/embed/-XMi4J_4RCI" frameborder="0" allowfullscreen></iframe>
-</center>
 
 This post will discuss the core of the AI system only — the rest of the systems, even though visible in the gameplay video, will be treated as black boxes. For starters, they're there just to provide something to get the action running. As such, they're incomplete and not very interesting to talk about. They're, however, very likely to be the focus of a few different articles in the future; I feel the prototype is worth working on further.
 
@@ -25,11 +23,9 @@ Most of what I'll show here uses visual assets obtained from Unity's store. I ju
 
 ## Overview
 
-<center>
-<img src="/images/skeles.png"/>
+![skeles](/images/skeles.png)
 
 *The relevant components of a character doing battle.*
-</center>
 
 These are the rules for the prototype:
 
@@ -141,23 +137,17 @@ We want for the gambits to be tweakable in the editor while the game is running,
 
 For example, a group of orcs could use only a couple of gambits: `Aggressive Orc Gambit` and `Orc Priest Gambit`. In the prototype scene there's a gambit for each one of the party members (a dragon knight, a sorceress and a priest), and another gambit shared by all the skeletons (which has a single rule: attack the closest enemy), except for the skeleton mage, who has his own gambit.
 
-<center>
-<img src="/images/gambit2.png"/>
+![gambit2](/images/gambit2.png)
 
 *A few gambits*
-</center>
 
-<center>
-<img src="/images/gambit3.png"/>
+![gambig3](/images/gambit3.png)
 
 *A Combat AI component with the Dragon Knight gambit assigned. The `CombatAI` component resides on the `GameCharacter`'s `GameObject`.*
-</center>
 
 The gambit has a custom inspector written for it, allowing for easier changing of the rules within. This video illustrates the process nicely:
 
-<center>
 <iframe width="590" height="430" src="https://www.youtube.com/embed/1w2Czj2OOco" frameborder="0" allowfullscreen></iframe>
-</center>
 
 ## The `CombatRule`
 
@@ -195,13 +185,6 @@ The `CombatRule` is as plain as it can get. It holds the selector, filters and a
 
 ## The `Selector`s and `Filter`s
 
-<div class="in-article-question">
-<h3>Note</h3>
-Using **LINQ** for the filters was an easy choice, the functional style is the perfect fit. 
-
-In a real project however, this would have to be optimized away; the allocation frenzy just won't scale nicely with the number of characters fighting and with the size of the gambits.
-</div>
-
 Selectors and filters are very much alike.
 
 ```cs
@@ -220,11 +203,9 @@ public abstract class TargetFilter : ScriptableObject
 
 Selectors pick between `Self`, `Allies` and `Enemies` as the subset of characters to apply filters on. Filters further reduce the space used to pick a target. A `Rule` with no `Filter`s will return the first element of the result of applying the selector onto the list of combatants. 
 
-<center>
-<img src="/images/select.png"/>
+![select](/images/select.png)
 
 *Some selector assets.*
-</center>
 
 For example, a rule with the `Enemies` selector and no filters will return the first enemy in the list.
 
@@ -280,11 +261,9 @@ public class NearestFilter : TargetFilter
 }
 ```
 
-<center>
-<img src="/images/filters.png"/>
+![filters](/images/filters.png)
 
 *Some filter assets.*
-</center>
 
 The filters and selectors represent most of the boilerplate work of this whole prototype. This is because a new asset/SO instance needs to be created for each separate filter. On the upside, they need to only be created once and you're done.
 
@@ -307,11 +286,9 @@ public abstract class CharacterAction : ScriptableObject
 
 There are three types of actions: `AttackAction`, `CastSpellAction` and `UseItemAction`. Each one derives from `CharacterAction` and aside from the `AttackAction`, there's one asset per spell/item.
 
-<center>
-<img src="/images/acts.png"/>
+![acts](/images/acts.png)
 
 *Spell action assets.*
-</center>
 
 ```cs
 public class CastSpellAction : CharacterAction
