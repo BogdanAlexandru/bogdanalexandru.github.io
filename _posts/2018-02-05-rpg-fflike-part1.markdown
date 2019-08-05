@@ -8,6 +8,8 @@ Final Fantasy XII has one of the most interesting features I've seen in games up
 
 A while ago I was wondering what it'd take to get something like it up and running in Unity, and the following prototype is the result. It's definitely rough around the edges, but worked on some more it could prove to be a great way to get clever-looking AIs up and running. I can see it being applicable not only to RPGs but also other game genres where there are direct confrontations between multiple characters, with both offensive and support mechanics.
 
+<!--more-->
+
 A short gameplay video is here:
 
 <center>

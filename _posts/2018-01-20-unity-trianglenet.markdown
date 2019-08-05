@@ -10,6 +10,8 @@ This is a fairly rough prototype that can be further improved in a real project,
 
 Scenario: you want to define a polygonal area in your scene and pick random locations on it, for example to have a NPC roam within. There's no one-shot solution for this that I'm aware of, but there's at least one method for picking uniform random points within a triangle. Since polygons can be triangulated, we can apply the triangle formula in the context of the polygon.
 
+<!--more-->
+
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 ### Note:
