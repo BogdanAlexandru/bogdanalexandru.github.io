@@ -6,14 +6,14 @@ permalink: /work/
 
 ### [Heroes & Towns](/heroestowns)
 
+A town management and RPG hybrid, currently in prototype phase, developed using Unity.
+
 <ul>
     <li style="display:inline">
         <a href="/images/pq3d1.png" target="_blank"><img src="/images/pq3d1.png" width="300" height="169" /></a>
         <a href="/images/pq3d2.png" target="_blank"><img src="/images/pq3d2.png" width="301" height="169" /></a>
     </li>
 </ul>
-
-A town management and RPG hybrid, currently in prototype phase, developed using Unity.
 
 ## Past Employers
 <ul id="employers">
