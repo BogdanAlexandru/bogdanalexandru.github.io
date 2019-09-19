@@ -4,6 +4,10 @@ title: "RPG Combat AI with If-Then Rules in Unity"
 date:   2018-02-05 13:53:16 +0300
 ---
 
+### Update 15 Aug 2019
+**The combat AI is now being used in [Heroes & Towns](/heroestowns/).**
+
+
 Final Fantasy XII has one of the most interesting features I've seen in games up to date: the Gambit system. It provides a neat way to program the AI of your party's characters using "if-then" rules. It's clever, simple, and perfectly usable. The system is extensively described on the [Final Fantasy wiki](http://finalfantasy.wikia.com/wiki/Gambits), if you're curious about its intricacies.
 
 A while ago I was wondering what it'd take to get something like it up and running in Unity, and the following prototype is the result. It's definitely rough around the edges, but worked on some more it could prove to be a great way to get clever-looking AIs up and running. I can see it being applicable not only to RPGs but also other game genres where there are direct confrontations between multiple characters, with both offensive and support mechanics.
